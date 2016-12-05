@@ -415,11 +415,7 @@ table {
 	width: 100%;
 }
 
-@media (min-width: 1200px) {
-	.container {
- 	   width: 1000px;
-	}	
-}
+
 
 @media (min-width: 992px) {
 	.container {
@@ -427,11 +423,37 @@ table {
 	}	
 }
 
+@media (min-width: 1200px) {
+	.container {
+ 	   width: 750px;
+	}	
+}
+
+@media (min-width: 1350px) {
+	.container {
+ 	   width: 1000px;
+	}	
+}
+
+
+.blur-overlay {
+	height: 100%;
+	width:100%;
+	position: fixed;
+	top:0px;
+	left:0px;
+	background: white;
+	opacity: 0.6;
+	z-index: 999;
+}
+
+.header-subtitle {
+	font-family: 'Francois One', sans-serif;
+}
 
 
 .title-banner {
 	position: fixed;
-	border: solid 5px black;
 	font-size: 4em;
 	text-align: center;
 	color: black;
@@ -440,13 +462,25 @@ table {
 	bottom: 0;
 	left:0;
 	right: 0;
-	height: 100px;
-	width: 300px;
+	height: 200px;
+	width: 70%;
+	z-index: 1000;
+}
+
+.title-banner img {
+	height: 200px;
 }
 
 .site-branding {
 	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
 }
+
+.header-logo {
+	padding: 10px 40px;
+}
+
 
 .entry-title {
 	font-family: 'Francois One', sans-serif;
@@ -463,6 +497,15 @@ table {
 	text-align: center;
 	border-bottom: solid 4px black;
 	margin-bottom: 20px;
+}
+
+.page .entry-header {
+	text-align: center;
+	font-family: 'Francois One', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	color: black;
+	border-bottom: solid 4px black;
 }
 
 .release-item {
@@ -484,9 +527,47 @@ table {
 	font-size: 2rem;
 }
 
+	@media screen and (min-width: 768px) and (max-width: 1350px) {
+		.release-title {
+			font-size: 1.5rem;
+		}
+	}
+
 .release-subtitle {
 	text-align: center;
 
+}
+
+.bandcamp-placeholder {
+	position: relative;
+	width: 100%;
+	border: solid 5px black;
+}
+
+.bandcamp-placeholder:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.bandcamp-link {
+	position: absolute;
+	display:flex;
+	top:0;
+	bottom: 0;
+	margin: 20%;
+	text-align: center;
+	left:0;
+	right:0;
+	 align-items: center;
+	justify-content: center;
+	font-family: 'Francois One', sans-serif;
+	font-size:2rem;
+
+}
+
+.bandcamp-link:hover {
+	text-decoration: underline;
 }
 
 .gigpress-info {
@@ -513,6 +594,29 @@ table {
 	color: black;
 }
 
+.reviews-archive .entry-title {
+	font-size: 1.2rem;
+}
+
+.reviews-category-title {
+	font-size: 2.2rem;
+	text-transform: uppercase;
+	font-family: 'Francois One', sans-serif;
+	padding: 0 0 15px 0;
+	margin: 20px 0;
+	border-bottom: solid 6px black;
+	color: black;
+}
+
+.reviews-read-more {
+	font-size: 0.8rem;
+	color: black;
+}
+
+.reviews-read-more:hover {
+	color: black;
+	text-decoration: underline;
+}
 
 
 
@@ -605,6 +709,14 @@ textarea {
 	width: 100%;
 }
 
+#mc_embed_signup .mc-field-group input  {
+ 	border: none;
+    border-bottom: solid 2px black;
+    border-radius: 0px;
+    background: transparent;
+    color: black;
+    margin: 0;
+}1
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -632,6 +744,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
+	color: black;
 	text-decoration: none;
 }
 
@@ -653,6 +766,9 @@ a:active {
 .social-links li {
 	 display: inline;
 	 font-size: 0.8rem;
+	 font-family: 'Yantramanav', sans-serif;
+	 font-weight: 500;
+	 letter-spacing: 1px;
 }
 
 .social-links li a:hover {
@@ -718,6 +834,10 @@ a:active {
 
 @media screen and (max-width: 768px) {
 
+	body {
+		margin-bottom: 50px;
+	}
+
 	.mobile-menu-container {
 		display: flex;
 		align-items: center;
@@ -754,6 +874,7 @@ a:active {
 	transition: all 0.2s linear;
 }
 
+.cojones-menu-item.active,
 .cojones-menu-item:hover {
 	border:solid 4px black;
 	transition: all 0.2s linear;

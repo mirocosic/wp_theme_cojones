@@ -18,13 +18,13 @@
 	</div><!-- .entry-meta -->
 	
 	<?php
-		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-			echo '<div class="text-center">';
-  			the_post_thumbnail();
-  			echo '</div>';
-		}
-	?>
-
+		if ( has_post_thumbnail() ) : ?>
+			<a href=" <? the_permalink(); ?>">
+				<div class="text-center">
+  					<? the_post_thumbnail(); ?>
+  				</div>
+			</a>
+	<? endif; ?>
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -39,21 +39,22 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'cojones' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+	<? if ( is_single() ) :?>
+		<div class="entry-content">
+			<?php
+				the_content( sprintf(
+					/* translators: %s: Name of current post. */
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'cojones' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cojones' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cojones' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+	<? endif; ?>
 	<footer class="entry-footer">
 		<?php //cojones_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

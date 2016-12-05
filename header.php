@@ -28,24 +28,22 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding row">
-			<div class="col-md-3">
-				<h4>Follow us</h4>
+			<div class=" col-sm-6 col-md-3 hidden-xs hidden-sm">
+				<h4 class="header-subtitle">Follow us</h4>
 				<ul class="social-links">
-					<li><a href="">FACEBOOK</a> /</li>
-					<li><a href="">BANDCAMP</a> /</li> 
-					<li><a href="">TWITTER</a> /</li>
-					<li><a href="">YOUTUBE</a> /</li>
-					<li><a href="">INSTAGRAM</a></li>
+					<li><a href="https://www.facebook.com/cojonesband/" target="_blank">FACEBOOK</a> /</li>
+					<li><a href="http://music.cojonesband.com" target="_blank">BANDCAMP</a> /</li> 
+					<li><a href="https://twitter.com/cojonesband" target="_blank">TWITTER</a> /</li>
+					<li><a href="https://www.youtube.com/user/cojonesband" target="_blank">YOUTUBE</a> /</li>
+					<li><a href="https://www.instagram.com/cojonesband" target="_blank">INSTAGRAM</a></li>
 				</ul>
-				
-
 			</div>
-			<div class="col-md-6 text-center">
-				<h1>COJONES</h1>
+			<div class="header-logo col-sm-12 col-md-6 text-center" style="display:block;">
+				<a href="/"><img src="<? echo get_template_directory_uri() . '/cojones-logo.svg'?>" style="margin: auto;"/></a>
 			</div>
-			<div class="col-md-3">
-				<h4>Newsletter signup</h4>
-				INSERT MAILCHIMP HERE!
+			<div class="col-md-3 hidden-xs hidden-sm">
+				<h4 class="header-subtitle">Newsletter signup</h4>
+				<? get_template_part( 'template-parts/mailchimp'); ?>
 			</div>
 		</div><!-- .site-branding -->
 
@@ -58,5 +56,9 @@
 
 	<?php get_template_part( 'template-parts/menu');?>
 	
-	<?php get_template_part( 'template-parts/title-banner' );?>
+	<?php if (is_front_page()) {
+		get_template_part( 'template-parts/title-banner');
+	}
+	?>
+
 	<div id="content" class="site-content">

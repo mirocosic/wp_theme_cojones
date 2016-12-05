@@ -24,47 +24,55 @@ get_header(); ?>
 
 			<div class="col-xs-12 col-ms-6 col-sm-6 col-md-4 release-item">
 				<div class="release-image">
-					<img src="/wp-content/uploads/2016/11/COVER.jpg" alt="Cojones - Resonate LP" class="img-responsive"/>
+					<a href="/music/resonate"><img src="/wp-content/uploads/2016/11/COVER.jpg" alt="Cojones - Resonate LP" class="img-responsive"/></a>
 				</div>
-				<div class="release-title">RESONATE</div>
-				<div class="release-subtitle">LP + CD</div>
+				<div class="release-title"><a href="/music/resonate">RESONATE</a></div>
+				<div class="release-subtitle">((LP + CD))</div>
 			</div>
 
 			<div class="col-xs-12 col-ms-6 col-sm-6 col-md-4 release-item">
 				<div class="release-image">
-					<img src="/wp-content/uploads/2016/11/a2450242558_2.jpg" alt="Cojones - Resonate LP" class="img-responsive"/>
+					<a href="/music/bend-to-transcend">
+						<img src="/wp-content/uploads/2016/11/a2450242558_2.jpg" alt="Cojones - Bend To Transcend" class="img-responsive"/>
+					</a>
 				</div>
-				<div class="release-title">BEND TO TRANSCEND</div>
-				<div class="release-subtitle">LP + CD, 2 EDITIONS</div>
+				<div class="release-title"><a href="/music/bend-to-transcend">BEND TO TRANSCEND</a></div>
+				<div class="release-subtitle">((LP + CD, 2 EDITIONS))</div>
 			</div>
 
 			<div class="col-xs-12 col-ms-6 col-sm-6 col-md-4 release-item">
 				<div class="release-image">
-					<img src="/wp-content/uploads/2016/11/a4131499880_16.jpg" alt="Cojones - Resonate LP" class="img-responsive"/>
+					<a href="/music/sunrise">
+						<img src="/wp-content/uploads/2016/11/a4131499880_16.jpg" alt="Cojones - Sunrise" class="img-responsive"/>
+					</a>
 				</div>
-				<div class="release-title">SUNRISE</div>
-				<div class="release-subtitle">CD, 2 EDITIONS</div>
+				<div class="release-title"><a href="/music/sunrise">SUNRISE</a></div>
+				<div class="release-subtitle">((CD, 2 EDITIONS))</div>
 			</div>
 
 			<div class="col-xs-12 col-ms-6 col-sm-6 col-md-4 release-item">
 				<div class="release-image">
-					<img src="/wp-content/uploads/2016/11/a1672808866_16-1.jpg" alt="Cojones - Resonate LP" class="img-responsive"/>
+					<a href="/music/bend-to-transcend">
+						<img src="/wp-content/uploads/2016/11/a1672808866_16-1.jpg" alt="Cojones - Live In Jena" class="img-responsive"/>
+					</a>
 				</div>
-				<div class="release-title">LIVE IN JENA</div>
-				<div class="release-subtitle">DOWNLOAD</div>
+				<div class="release-title"><a href="/music/live-in-jena">LIVE IN JENA</a></div>
+				<div class="release-subtitle">((DOWNLOAD))</div>
 			</div>
 
-			<div class="col-xs-12 col-ms-6  col-sm-6 col-md-4 release-item">
+			<div class="col-xs-12 col-ms-6 col-sm-6 col-md-4 release-item">
 				<div class="release-image">
-					<img src="/wp-content/uploads/2016/11/a3608906154_2.jpg" alt="Cojones - Resonate LP" class="img-responsive"/>
+					<a href="/music/split-ep">
+						<img src="/wp-content/uploads/2016/11/a3608906154_2.jpg" alt="Cojones - Split EP" class="img-responsive"/>
+					</a>
 				</div>
-				<div class="release-title">UMOR SPLIT EP</div>
-				<div class="release-subtitle">CD</div>
+				<div class="release-title"><a href="/music/split-ep">UMOR SPLIT EP</a></div>
+				<div class="release-subtitle">((CD))</div>
 			</div>
 
-			<div class="col-sm-6 col-md-4  release-item">
-				<div class="release-image">
-					
+			<div class="col-xs-12 col-ms-6 col-sm-6 col-md-4 release-item">
+				<div class="bandcamp-placeholder">
+					<div class="bandcamp-link"><a href="http://music.cojonesband.com" target="_blank">GO TO BANDCAMP PAGE</a></div>
 				</div>
 				
 			</div>

@@ -104,7 +104,7 @@ add_action( 'widgets_init', 'cojones_widgets_init' );
 function cojones_scripts() {
 
 	wp_enqueue_style( 'cojones-font-francois-one', 'https://fonts.googleapis.com/css?family=Francois+One');
-	wp_enqueue_style( 'cojones-font-yantramanav', 'https://fonts.googleapis.com/css?family=Yantramanav');
+	wp_enqueue_style( 'cojones-font-yantramanav', 'https://fonts.googleapis.com/css?family=Yantramanav:400,500');
 	
 
 	
@@ -120,6 +120,8 @@ function cojones_scripts() {
 	wp_enqueue_script( 'cojones-headroom', get_template_directory_uri() . '/js/headroom.min.js' );
 	wp_enqueue_script( 'cojones-jquery-headroom', get_template_directory_uri() . '/js/jQuery.headroom.js' );
 
+	wp_enqueue_script( 'cojones-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js' );
+
 	wp_enqueue_script( 'cojones-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'cojones-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -131,6 +133,30 @@ function cojones_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'cojones_scripts' );
+
+
+function cojones_custom_posttypes() {
+	$labels = [
+		'add_new_item' => 'Add new Review'
+	];
+
+	$args = [
+		'public' => true,
+		'label' => 'Reviews',
+		'menu_icon' => 'dashicons-star-half',
+		'has_archive' => true,
+		'taxonomies'  => array( 'category' ),
+		'supports' => array( 'title', 'editor', 'custom-fields', 'excerpt' ),
+		'labels' => $labels
+	];
+
+	register_post_type('reviews', $args);
+
+}
+
+add_action('init', 'cojones_custom_posttypes');
+
+
 
 /**
  * Implement the Custom Header feature.
